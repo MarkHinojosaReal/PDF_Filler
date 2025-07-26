@@ -47,7 +47,7 @@ jobs:
       id: pdf-reader
       run: |
         echo "Reading PDF form fields..."
-        python src/read_fields.py
+        uv run src/read_fields.py
         echo "exit_code=$?" >> $GITHUB_OUTPUT
         
     - name: Check script exit code
