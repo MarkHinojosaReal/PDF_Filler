@@ -79,7 +79,7 @@ class PDFFormFillerApp:
 def main():
     """Main function demonstrating the modular PDF form filler."""
     # Configuration
-    pdf_path = "docs/License-Transfer-Form.pdf"
+    pdf_path = "docs/Sample-Fillable-PDF.pdf"
     
     # Create the application
     app = PDFFormFillerApp(pdf_path)
@@ -121,7 +121,7 @@ def main():
 
 def interactive_mode():
     """Interactive mode for filling PDF forms."""
-    pdf_path = "docs/License-Transfer-Form.pdf"
+    pdf_path = "docs/Sample-Fillable-PDF.pdf"
     app = PDFFormFillerApp(pdf_path)
     
     # Analyze the PDF first

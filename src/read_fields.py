@@ -60,7 +60,7 @@ def main():
         print(f"Files in docs/: {list(Path('docs').glob('*')) if Path('docs').exists() else 'docs/ not found'}")
     
     # Path to the PDF file
-    pdf_path = "docs/License-Transfer-Form.pdf"
+    pdf_path = "docs/Sample-Fillable-PDF.pdf"
     
     print(f"Attempting to read PDF: {pdf_path}")
     

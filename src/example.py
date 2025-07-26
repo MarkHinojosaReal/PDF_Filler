@@ -12,7 +12,7 @@ def example_read_only():
     """Example of reading PDF fields only."""
     print("=== Example: Reading PDF Fields ===")
     
-    pdf_path = "docs/License-Transfer-Form.pdf"
+    pdf_path = "docs/Sample-Fillable-PDF.pdf"
     
     # Method 1: Using the PDFReader class
     reader = PDFReader(pdf_path)
@@ -29,7 +29,7 @@ def example_fill_form():
     """Example of filling a PDF form."""
     print("\n=== Example: Filling PDF Form ===")
     
-    pdf_path = "docs/License-Transfer-Form.pdf"
+    pdf_path = "docs/Sample-Fillable-PDF.pdf"
     output_path = "docs/example_filled_form.pdf"
     
     # First, let's see what fields are available
@@ -61,7 +61,7 @@ def example_using_app():
     """Example using the main application class."""
     print("\n=== Example: Using PDFFormFillerApp ===")
     
-    pdf_path = "docs/License-Transfer-Form.pdf"
+    pdf_path = "docs/Sample-Fillable-PDF.pdf"
     
     # Create the application
     app = PDFFormFillerApp(pdf_path)
@@ -88,7 +88,7 @@ def example_step_by_step():
     """Example showing step-by-step process."""
     print("\n=== Example: Step-by-Step Process ===")
     
-    pdf_path = "docs/License-Transfer-Form.pdf"
+    pdf_path = "docs/Sample-Fillable-PDF.pdf"
     output_path = "docs/step_by_step_filled.pdf"
     
     # Step 1: Read the PDF

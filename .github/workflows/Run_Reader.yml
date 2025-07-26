@@ -35,7 +35,7 @@ jobs:
         
     - name: Check PDF file exists
       run: |
-        if [ -f "docs/License-Transfer-Form.pdf" ]; then
+        if [ -f "docs/Sample-Fillable-PDF.pdf" ]; then
           echo "✅ PDF file found"
           ls -la docs/
         else
