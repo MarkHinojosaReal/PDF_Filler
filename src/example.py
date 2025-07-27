@@ -3,9 +3,9 @@
 Example usage of the modular PDF form filler
 """
 
+from main import PDFFormFillerApp
 from pdf_reader import PDFReader, display_fields
 from pdf_writer import PDFWriter, fill_pdf_form
-from main import PDFFormFillerApp
 
 
 def example_read_only():

@@ -6,6 +6,7 @@ Setup script to create .env file with API keys.
 import os
 from pathlib import Path
 
+
 def create_env_file():
     """Create .env file with the Google GenAI API key."""
     env_content = """# Google GenAI API Configuration

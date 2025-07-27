@@ -5,7 +5,7 @@ Handles reading and analyzing PDF form fields
 
 import sys
 from pathlib import Path
-from typing import Dict, Any, Optional
+from typing import Any, Dict, Optional
 
 try:
     from PyPDF2 import PdfReader

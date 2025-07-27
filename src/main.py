@@ -6,7 +6,7 @@ Orchestrates reading and writing PDF forms using modular components
 
 import sys
 from pathlib import Path
-from typing import Dict, Any
+from typing import Any, Dict
 
 # Import our modules
 from pdf_reader import PDFReader, display_fields

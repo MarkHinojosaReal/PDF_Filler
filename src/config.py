@@ -5,7 +5,9 @@ Handles environment variables and API key management.
 
 import os
 from pathlib import Path
+
 from dotenv import load_dotenv
+
 
 # Load environment variables from .env file
 def load_environment():

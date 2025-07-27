@@ -3,13 +3,14 @@ PDF Field Analyzer using PyMuPDF and LangChain Google GenAI.
 Analyzes non-fillable PDFs to identify potential fillable fields.
 """
 
-import fitz  # PyMuPDF
-from typing import List, Dict, Any
-from dataclasses import dataclass
-from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain.schema import HumanMessage
 import json
+from dataclasses import dataclass
 from pathlib import Path
+from typing import Any, Dict, List
+
+import fitz  # PyMuPDF
+from langchain.schema import HumanMessage
+from langchain_google_genai import ChatGoogleGenerativeAI
 
 from config import Config
 

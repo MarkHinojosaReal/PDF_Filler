@@ -5,7 +5,7 @@ Handles filling and writing PDF forms
 
 import sys
 from pathlib import Path
-from typing import Dict, Any, Optional
+from typing import Any, Dict, Optional
 
 try:
     from PyPDF2 import PdfReader, PdfWriter

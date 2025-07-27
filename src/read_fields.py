@@ -4,8 +4,8 @@ Simple script to read and display PDF form fields
 Can be run in GitHub Actions or locally
 """
 
-import sys
 import os
+import sys
 from pathlib import Path
 
 try:
