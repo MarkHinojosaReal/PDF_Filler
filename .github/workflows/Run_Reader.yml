@@ -8,7 +8,7 @@ on:
   workflow_dispatch: 
 
 jobs:
-  read-pdf-fields:
+  generate-field-report:
     runs-on: ubuntu-latest
     
     steps:
@@ -66,3 +66,14 @@ jobs:
       with:
         name: field_analysis_report.json
         path: field_analysis_report.json
+
+  validate-field-report:
+    needs: generate-field-report
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: field_analysis_report.json
+      - name: Check Directory
+        run: ls
