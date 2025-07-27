@@ -27,4 +27,23 @@ jobs:
       run: uv sync
     
     - name: Run Isort Check
-      run: uv run isort --check --diff --verbose
+      id: isort-check
+      run: uv run isort . --check --diff --verbose
+      continue-on-error: true
+
+    - name: Check Isort Results
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const exitCode = ${{ steps.isort-check.outputs.exit-code || steps.isort-check.outcome }};
+          const isSuccess = exitCode === 0 || exitCode === 'success';
+          
+          if (isSuccess) {
+            console.log("✅ Isort check passed");
+            console.log("All Python imports are properly sorted");
+          } else {
+            console.error("❌ Isort check failed");
+            console.error("Python imports need to be sorted");
+            console.error("Run 'uv run isort .' to fix the formatting");
+            core.setFailed("Isort check failed - imports need to be sorted");
+          }
