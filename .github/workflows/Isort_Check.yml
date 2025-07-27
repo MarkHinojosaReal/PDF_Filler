@@ -35,8 +35,8 @@ jobs:
       uses: actions/github-script@v7
       with:
         script: |
-          const exitCode = ${{ steps.isort-check.outputs.exit-code || steps.isort-check.outcome }};
-          const isSuccess = exitCode === 0 || exitCode === 'success';
+          const stepOutcome = '${{ steps.isort-check.outcome }}';
+          const isSuccess = stepOutcome === 'success';
           
           if (isSuccess) {
             console.log("✅ Isort check passed");
