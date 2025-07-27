@@ -47,7 +47,7 @@ jobs:
       id: pdf-reader
       run: |
         echo "Reading PDF form fields..."
-        uv run src/read_fields.py
+        uv run read_pdf_fields.py
         echo "exit_code=$?" >> $GITHUB_OUTPUT
         
     - name: Check script exit code
@@ -60,3 +60,9 @@ jobs:
       if: steps.pdf-reader.outputs.exit_code == '0'
       run: |
         echo "✅ PDF reader completed successfully!"
+
+    - name: Upload Json Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: field_analysis_report.json
+        path: field_analysis_report.json
