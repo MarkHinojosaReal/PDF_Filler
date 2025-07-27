@@ -1,0 +1,23 @@
+name: Contribution Message
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    types: [ opened, synchronize, reopened, edited ]
+  workflow_dispatch:
+
+jobs:
+  log-contribution:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Log Contribution Message
+      uses: actions/github-script@v7
+      with:
+        script: |
+          console.log("🎉 Nice Job Contributing!");
+          console.log("Thank you for your contribution to this project!");
