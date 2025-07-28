@@ -10,7 +10,8 @@ on:
 jobs:
   generate-field-report:
     runs-on: ubuntu-latest
-    
+    outputs:
+        script-file: ${{ steps.pdf-reader.outputs.script-file }}
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -24,6 +25,14 @@ jobs:
       uses: astral-sh/setup-uv@v3
       with:
         version: latest
+
+    - name: Cache Dependencies
+      uses: actions/cache@v3
+      with: 
+        path: ~/.cache/uv/
+        key: uv-${{ runner.os }}-${{ hashFiles('**/pyproject.toml') }}
+        restore-keys: |
+          uv-${{ runner.os }}
         
     - name: Install dependencies
       run: uv sync
